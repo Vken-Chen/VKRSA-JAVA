@@ -5,7 +5,7 @@
 <p>该代码是用java.security库实现的RSA相关封装，目前只支持加密、解密，签名和验签后续再完善。</p>
 <p>DEMO使用的IDE为Idea14，Eclipse或者其他IDE请自行迁移。</p>
 ## 1. Demo运行效果
-<p align="center"><img src="https://github.com/Vken-Chen/VKRSA-JAVA/blob/master/demo.png" width="400"></p> 
+<p align="center"><img src="https://github.com/Vken-Chen/VKRSA-JAVA/blob/master/demo.png" width="600"></p> 
 ## 2. 使用步骤
 <p>使用VKRSAOperator类进行加解密相关操作</p>
 <li>step 1.密钥初始化</li>
