@@ -1,9 +1,10 @@
 #VKRSA-Java&&Android平台实现
-近期本人针对RSA算法进行了封装，该代码为java代码，兼容Android平台。当前为java平台的测试demo，后续补充java平台的测试Demo；
-<p><h4>iOS平台代码请转到<a href='https://github.com/Vken-Chen/VKRSA'>Vken-Chen/VKRSA</a></p>
+近期本人针对RSA算法进行了封装，该代码为java代码，兼容Android平台。
+<p><h3>iOS平台代码请转到<a href='https://github.com/Vken-Chen/VKRSA'>Vken-Chen/VKRSA</a></p>
 ## 说明
-<p>该代码是用java.security库实现的RSA相关封装，目前只支持加密、解密，签名和验签后续再完善。</p>
-<p>DEMO使用的IDE为Idea14，Eclipse或者其他IDE请自行迁移。</p>
+<p>1.该代码是用java.security库实现的RSA相关封装，目前只支持加密、解密，签名和验签后续再完善。</p>
+<p>2.当前Demo代码为java平台的测试demo，后续补充java平台的测试Demo；
+<p>3.Demo使用的IDE为Idea14，Eclipse或者其他IDE请自行迁移。</p>
 ## 1. Demo运行效果
 <p align="center"><img src="https://github.com/Vken-Chen/VKRSA-JAVA/blob/master/demo.png" width="800"></p> 
 ## 2. 使用步骤
@@ -28,8 +29,7 @@ try {
 #### 2.1.2 私钥初始化
 <p>说明：如果只做解密，只需要初始化私钥。<br>
 目前私钥只支持pkcs8格式的PEM私钥文件，后续升级。<br>
-为什么私钥没有DER格式？目前DER格式一般来说只用于公钥，对外传播。</p>
-<li>PEM格式的私钥（PKCS8）</li>
+li>PEM格式的私钥（PKCS8）</li>
 <pre>
 try {
 	String privateKeyPEM= FileUtil.readFileAsString("src/rsa_private_key_pkcs8.pem");
@@ -41,7 +41,7 @@ try {
 </pre>
 </p>
 ### 2.2 加密
-<li> 加密NSData </li>
+<li> 加密Data(byte[]) </li>
 <pre>
 byte[] testData = ...;
 byte[] encryptedData =  operator.encryptData(testData);
@@ -54,7 +54,7 @@ byte[] encryptedData =  operator.encryptString(testString);
 </pre>
 
 ### 2.3 解密
-<li> 解密到Data </li>
+<li> 解密到Data(byte[]) </li>
 <pre>
 byte[] decryptData =  operator.decryptToData(encryptedData);
 </pre>
